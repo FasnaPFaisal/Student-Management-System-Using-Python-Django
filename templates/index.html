@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/sty.css' %}">
+</head>
+
+<body>
+    <nav class="nav_bar">
+        <h1 class="header">ABC University</h1>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'contact' %}">Contact</a>
+        <a href="{% url 'register' %}">Register</a>
+    </nav>
+    <div class="home_background">
+        <div class="table_background">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Register No.</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for x in registrations %}
+                    <tr>
+                        <td>{{ x.register_no }}</td>
+                        <td>{{ x.name }}</td>
+                        <td>{{ x.age }}</td>
+                        <td>{{ x.email }}</td>
+                        <td>{{ x.phone_number }}</td>
+                        <td>
+                            <a href="{% url 'update' x.id %}">
+                                <button class="update_btn">Update</button>
+                            </a>
+                        </td>
+                        <td>
+                            <form action="{% url 'delete' x.id %}" method="post" style="display: inline;">
+                                {% csrf_token %}
+                                <button class="delete_btn">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

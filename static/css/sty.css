@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.nav_bar {
+    background-color: #333;
+    color: white;
+    padding: 27px 0;
+    text-align: center;
+}
+
+.header{
+    font-size: 30px;
+    margin: 0;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav_bar a {
+    color: white;
+    padding: 0 15px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.nav_bar a:hover {
+    background-color: #575757;
+}
+
+.home_background {
+    background-image: linear-gradient(to bottom, rgba(37, 37, 37, 0.52), rgba(46, 46, 46, 0.73)), url('/static/images/stu_page.jpeg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    height: 640px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.register_background{
+    background-image: linear-gradient(to bottom, rgba(37, 37, 37, 0.52), rgba(46, 46, 46, 0.73)), url('/static/images/register_page.jpeg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    height: 640px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.table_background {
+    background: rgba(76, 76, 76, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form_background{
+    background: rgba(76, 76, 76, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+form label {
+    margin-bottom: 0;
+    font-weight: bold;
+    flex: 1;
+    text-align: left;
+}
+
+form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.center-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+form button {     
+    font-size: 17px;
+    padding: 10px 15px;
+    background-color: #260195;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #7a5eec;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #333;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    background-color: #ddd;
+}
+.update_btn {
+    font-size: 15px;
+    background-color: green; 
+    color: rgb(235, 233, 233); 
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.delete_btn {
+    font-size: 15px;
+    background-color: red; 
+    color: rgb(235, 233, 233); ;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}

@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css\style.css' %}">
+</head>
+
+<body>
+    <div class="addemp_background">
+        <nav class="nav_bar">
+            <h1 class="header">Employee Management System</h1>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'addemp' %}">Add Employee</a>
+        </nav>
+        <div class="addemp">
+            <div class="form_background">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <input type="text" name="employee_id" id="" placeholder="Employee ID">
+                    <input type="text" name="name" id="" placeholder="Name">                    
+                    <input type="text" name="email" id="" placeholder="Email">
+                    <input type="text" name="contact_number" id="" placeholder="Contact Number">
+                    <textarea name="address" id="" placeholder="Address"></textarea>
+                    <input type="date" name="date_of_joining" id="" placeholder="DOB">
+                    <input type="text" name="role" id="" placeholder="Role">
+                    <button type="submit">Add Employee</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

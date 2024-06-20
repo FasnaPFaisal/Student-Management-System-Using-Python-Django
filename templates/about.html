@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css\style.css' %}">
+</head>
+
+<body>
+    <div class="main">
+        <img src="{% static 'images\download1.png' %}" alt="">
+        <h1 class="header">This is About Page</h1>
+    </div>
+
+    <h2 class="sub_header">Student Details</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Course</th>
+            </tr>            
+        </thead>
+        <tbody>
+            {% for x in student %}
+            <tr>
+                <td>{{x.name}}</td>
+                <td>{{x.age}}</td>
+                <td>{{x.course}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>        
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Registration</title>
+    <link rel="stylesheet" href="{% static 'css/stys.css' %}">
+</head>
+
+<body>
+    <nav class="nav_bar">
+        <h1 class="header">ABC University</h1>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'contact' %}">Contact</a>
+        <a href="{% url 'register' %}">Register</a>
+    </nav>
+    <div class="register_background">
+        <div class="form_background">
+            <form action="" method="post">
+                {% csrf_token %}
+                <input type="text" name="register_no" value="{{ registrations.register_no }}" placeholder="Register No">
+                <input type="text" name="name" value="{{ registrations.name }}" placeholder="Name">
+                <input type="text" name="age" value="{{ registrations.age }}" placeholder="Age">
+                <input type="text" name="email" value="{{ registrations.email }}" placeholder="Email">
+                <input type="text" name="phone_number" value="{{ registrations.phone_number }}" placeholder="Phone Number">
+                <button type="submit">Update</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+
